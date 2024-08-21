@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDP Mouse Event</title>
+    <style>
+        .table-border {
+            width: 30%;
+        }
+        .bordered {
+            border: 1px dashed #333;
+        }
+        .span-2 {
+            padding: 5px 7px;
+            width: 30%;
+            text-align: center;
+        }
+        .p-left {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Different Types of Mouse Event</h4>
+        <table class="table-border">
+            <tbody>
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mouse-click">Click me!</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user clicks an element.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="doublemouseclick">Double Click me!</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user double-clicks an element.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mousedownevent">Mouse Down Event</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user presses the mouse button.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mouseupevent">Mouse Up Event</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user releases the mouse button.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mouseover">Mouse Over</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user moves the mouse over an element.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mouseout">Mouse Out</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user moves the mouse out of an element.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bordered span-2">
+                        <button id="mousemove">Mouse Move</button>
+                    </td>
+                    <td class="bordered p-left">
+                        Fired when the user moves the moves the mouse over an element.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const mouseclick = document.getElementById('mouse-click');
+
+        mouseclick.addEventListener('click', () => {
+            alert('You clicked the button!');
+        });
+
+        const doublemouseclick = document.getElementById('doublemouseclick');
+
+        doublemouseclick.addEventListener('dblclick', () => {
+            alert('You double-clicked the button!');
+        });
+
+        const mousedownevent = document.getElementById('mousedownevent');
+
+        mousedownevent.addEventListener('mousedown', () => {
+            alert('You triggered Mouse Down Event');
+        });
+
+        const mouseupevent = document.getElementById('mouseupevent');
+
+        mouseupevent.addEventListener('mouseup', () => {
+            alert('You triggered Mouse Up Event');
+        });
+        
+        const mouseover = document.getElementById('mouseover');
+
+        mouseover.addEventListener('mouseover', () => {
+            alert('You triggered Mouse Over');
+        });
+
+        const mouseout = document.getElementById('mouseout');
+
+        mouseout.addEventListener('mouseout', () => {
+            alert('You triggered Mouse Out');
+        });
+
+        const mousemove = document.getElementById('mousemove');
+
+        mousemove.addEventListener('mousemove', () => {
+            alert('You triggered Mouse Move');
+        });
+
+        
+    </script>
+</body>
+</html>
